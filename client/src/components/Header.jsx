@@ -27,9 +27,12 @@ export default function Header() {
         <AiOutlineSearch />
       </Button>
       <div>
-        <Button>
+        <Button className="w-12 h-10 hidden sm:inline" color="gray" pill>
           <FaMoon />
         </Button>
+        <Link to="/sign-in">
+          <Button gradientDuoTone="purpleToBlue">Sign In</Button>
+        </Link>
       </div>
     </Navbar>
   );
