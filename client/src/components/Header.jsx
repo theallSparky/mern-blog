@@ -19,6 +19,7 @@ export default function Header() {
           type="text"
           placeholder="Search..."
           rightIcon={AiOutlineSearch}
+          className="hidden lg:inline"
         />
       </form>
     </Navbar>
