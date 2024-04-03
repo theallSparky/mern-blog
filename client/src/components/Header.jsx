@@ -33,18 +33,18 @@ export default function Header() {
         <Link to="/sign-in">
           <Button gradientDuoTone="purpleToBlue">Sign In</Button>
         </Link>
-        <Navbar.Collapse>
-          <Navbar.Link>
-            <Link to="/">Home</Link>
-          </Navbar.Link>
-          <Navbar.Link>
-            <Link to="/about">About</Link>
-          </Navbar.Link>
-          <Navbar.Link>
-            <Link to="/projects">Projects</Link>
-          </Navbar.Link>
-        </Navbar.Collapse>
       </div>
+      <Navbar.Collapse>
+        <Navbar.Link>
+          <Link to="/">Home</Link>
+        </Navbar.Link>
+        <Navbar.Link>
+          <Link to="/about">About</Link>
+        </Navbar.Link>
+        <Navbar.Link>
+          <Link to="/projects">Projects</Link>
+        </Navbar.Link>
+      </Navbar.Collapse>
     </Navbar>
   );
 }
