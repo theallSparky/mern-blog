@@ -2,6 +2,8 @@ import User from "../models/user.model.js";
 import bcryptjs from "bcryptjs";
 import { errorHandler } from "../utils/error.js";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
 
 export const signup = async (req, res, next) => {
   const { username, email, password } = req.body;
@@ -33,7 +35,7 @@ export const signup = async (req, res, next) => {
   }
 };
 
-export const signin = async (req, res, nest) => {
+export const signin = async (req, res, next) => {
   const { email, password } = req.body;
 
   if (!email || !password || email === "" || password === "") {
@@ -49,6 +51,16 @@ export const signin = async (req, res, nest) => {
     if (!validPassword) {
       next(errorHandler(400, "Invalid password"));
     }
+    const token = jwt.sign(
+      { userId: validUser._id, username: validUser.username },
+      process.env.JWT_SECRET
+    );
+    res
+      .status(200)
+      .cookie("access_token", token, {
+        httpOnly: true,
+      })
+      .json(validUser);
   } catch (error) {
     next(error);
   }
