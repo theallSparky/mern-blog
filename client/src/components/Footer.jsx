@@ -18,7 +18,7 @@ export default function FooterComponent() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:mt-4 sm:grid-cols-3 sm:gap-6">
-            <div className="">
+            <div>
               <Footer.Title title="About" />
               <Footer.LinkGroup col>
                 <Footer.Link
@@ -37,6 +37,42 @@ export default function FooterComponent() {
                 >
                   Harry&apos;s Blog
                 </Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="Follow Us!" />
+              <Footer.LinkGroup col>
+                <Footer.Link
+                  href="https://www.linkedin.com/in/harrisonsparks/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </Footer.Link>
+                <Footer.Link
+                  href="https://github.com/theallSparky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </Footer.Link>
+                <Footer.Link
+                  href="https://twitter.com/theallSparky_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  X (Twitter)
+                </Footer.Link>
+                <br></br>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="Legal" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Privacy Policy</Footer.Link>
+              </Footer.LinkGroup>
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>
