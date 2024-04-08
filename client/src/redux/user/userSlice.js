@@ -1,5 +1,4 @@
-import { FaLessThanEqual } from "react-icons/fa";
-import { createSlice } from "reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   currentUser: null,
