@@ -6,7 +6,7 @@ import {
   signInStart,
   signInSuccess,
   signInFailure,
-} from "../redux/user/userSlice";
+} from "../redux/user/userSlice.js";
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
@@ -16,9 +16,6 @@ export default function SignIn() {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
-    {
-      /* .trim() removes all whitespaces in form fields */
-    }
   };
 
   const handleSubmit = async (e) => {
